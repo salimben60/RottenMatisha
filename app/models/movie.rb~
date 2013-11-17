@@ -1,5 +1,10 @@
 class Movie < ActiveRecord::Base
 
-  has_many :actors
+  has_many :actors, :through => :movies_actors
+
+
+
+  validates :title, presence: true,
+                    length: { minimum: 5 }
 
 end
