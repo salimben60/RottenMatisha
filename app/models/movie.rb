@@ -1,6 +1,6 @@
 class Movie < ActiveRecord::Base
 
-  has_many :actors, :through => :movies_actors
+  has_and_belongs_to_many :actors
 
 
 end

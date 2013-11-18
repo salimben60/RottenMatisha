@@ -1,6 +1,0 @@
-class CreateMoviesActors < ActiveRecord::Migration
-  def change
-    create_table :movies_actors do |t|
-    end
-  end
-end

@@ -21,17 +21,17 @@ ActiveRecord::Schema.define(version: 20131117071848) do
     t.datetime "updated_at"
   end
 
+  create_table "actors_movies", id: false, force: true do |t|
+    t.integer "actor_id"
+    t.integer "movie_id"
+  end
+
   create_table "movies", force: true do |t|
     t.string   "title"
     t.integer  "year"
     t.string   "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "movies_actors", id: false, force: true do |t|
-    t.integer "movie_id"
-    t.integer "actor_id"
   end
 
 end
